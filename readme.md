@@ -1,4 +1,4 @@
-#GUI JavaFX
+<h1>GUI JavaFX</h1>
 
-###GUI using javaFX and Scene Builder
+<h3>GUI using JavaFX, created in Java course.</h3>
 
