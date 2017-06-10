@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="622.0" prefWidth="400.0" style="-fx-background-color: #607D8B;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HotDogExpress.Controller.ForgotPasswordController">
+   <children>
+      <ImageView fitHeight="103.0" fitWidth="200.0" layoutX="113.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="38.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com seus dados para ter acesso ao sistema" />
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="288.0" prefHeight="29.0" prefWidth="356.0" promptText="E-mail" unFocusColor="#d9d9d9" />
+      <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="491.0" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #009688;" text="Cadastrar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="553.0" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="228.0" prefHeight="29.0" prefWidth="356.0" promptText="Nome Completo" unFocusColor="#d9d9d9" />
+      <JFXPasswordField focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="349.0" prefHeight="29.0" prefWidth="182.0" promptText="Senha" unFocusColor="#d9d9d9" />
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="21.0" layoutY="413.0" prefHeight="29.0" prefWidth="356.0" promptText="CPF" unFocusColor="#d9d9d9" />
+      <JFXDatePicker defaultColor="WHITE" layoutX="217.0" layoutY="349.0" overLay="true" prefHeight="30.0" prefWidth="170.0" promptText="Data Nascimento" />
+   </children>
+</AnchorPane>
