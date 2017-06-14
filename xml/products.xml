@@ -1,0 +1,99 @@
+<products>
+    <product>
+        <productCod>1</productCod>
+        <type>food</type>
+        <name>Hot Dog Simples</name>
+        <price>4.50</price>
+    </product>
+
+    <product>
+        <productCod>2</productCod>
+        <type>food</type>
+        <name>Hot Dog Duplo</name>
+        <price>6.90</price>
+    </product>
+
+    <product>
+        <productCod>3</productCod>
+        <type>food</type>
+        <name>Hot Dog Duplo com Cheddar</name>
+        <price>8.90</price>
+    </product>
+
+    <product>
+        <productCod>4</productCod>
+        <type>food</type>
+        <name>Hot Dog Plus</name>
+        <price>12</price>
+    </product>
+
+    <product>
+        <productCod>5</productCod>
+        <type>food</type>
+        <name>Hot Dog Plus com Cheddar</name>
+        <price>14.90</price>
+    </product>
+
+    <product>
+        <productCod>6</productCod>
+        <type>food</type>
+        <name>Hot Dog Master</name>
+        <price>19.90</price>
+    </product>
+
+    <product>
+        <productCod>7</productCod>
+        <type>food</type>
+        <name>Hot Dog Master Premium</name>
+        <price>22.90</price>
+    </product>
+
+    <product>
+        <productCod>8</productCod>
+        <type>food</type>
+        <name>Hot Dog Master Premium Plus</name>
+        <price>25</price>
+    </product>
+
+    <product>
+        <productCod>9</productCod>
+        <type>drink</type>
+        <name>Refrigerante Lata</name>
+        <price>4.5</price>
+    </product>
+
+    <product>
+        <productCod>10</productCod>
+        <type>drink</type>
+        <name>Água sem Gás</name>
+        <price>2.5</price>
+    </product>
+
+    <product>
+        <productCod>11</productCod>
+        <type>drink</type>
+        <name>Água com Gás</name>
+        <price>3.5</price>
+    </product>
+
+    <product>
+        <productCod>12</productCod>
+        <type>drink</type>
+        <name>Suco Natural</name>
+        <price>5</price>
+    </product>
+
+    <product>
+        <productCod>13</productCod>
+        <type>drink</type>
+        <name>Refrigerante 1L</name>
+        <price>6.99</price>
+    </product>
+
+    <product>
+        <productCod>14</productCod>
+        <type>drink</type>
+        <name>Refrigerante 2L</name>
+        <price>8.99</price>
+    </product>
+</products>

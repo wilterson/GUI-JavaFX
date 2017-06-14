@@ -5,7 +5,9 @@
 package hotDogExpress.views;
 
 import hotDogExpress.MainApp;
+import hotDogExpress.models.User;
 import hotDogExpress.util.Singleton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -35,7 +37,7 @@ public class RootLayoutController implements Initializable {
             this.app = Singleton.getInstance();
             this.labelUserEmail.setText(app.getUserActive().getEmail());
             this.labelUserName.setText(app.getUserActive().getNome());
-
+            setWelcomeMessage();
         } catch (FileNotFoundException e) {
             System.out.println("Erro na Inicialização: \n");
             e.printStackTrace();
@@ -44,5 +46,15 @@ public class RootLayoutController implements Initializable {
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+    }
+
+    public void setWelcomeMessage(){
+        labelUserName.setText(app.getUserActive().getNome());
+        labelUserEmail.setText(app.getUserActive().getEmail());
+    }
+
+    public void logout(ActionEvent actionEvent) {
+        app.setUserActive(new User(0, null, null, null, null, null, null, null));
+        mainApp.logout();
     }
 }

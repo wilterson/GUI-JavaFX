@@ -9,38 +9,47 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Product {
 
-    private static final AtomicInteger count = new AtomicInteger(0);
-
-    private int produtoCod;
+    private int productCod;
     private ProductType type;
-    private BigDecimal price;
+    private double price;
     private String name;
 
-    public Product(String name, BigDecimal price, ProductType type) {
-        this.produtoCod = count.incrementAndGet();
-
+    public Product(int productCod, ProductType type, double price, String name) {
+        this.productCod = productCod;
         this.type = type;
         this.price = price;
         this.name = name;
     }
 
-    public static AtomicInteger getCount() {
-        return count;
+    public int getProductCod() {
+        return productCod;
     }
 
-    public int getProdutoCod() {
-        return produtoCod;
+    public void setProductCod(int productCod) {
+        this.productCod = productCod;
     }
 
     public ProductType getType() {
         return type;
     }
 
-    public BigDecimal getPrice() {
+    public void setType(ProductType type) {
+        this.type = type;
+    }
+
+    public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

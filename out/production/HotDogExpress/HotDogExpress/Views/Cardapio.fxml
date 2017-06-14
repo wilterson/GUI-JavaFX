@@ -5,8 +5,6 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -15,38 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <BorderPane prefHeight="86.0" prefWidth="800.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
-         <left>
-            <ImageView fitHeight="64.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../resources/logo.png" />
-               </image>
-               <BorderPane.margin>
-                  <Insets left="15.0" />
-               </BorderPane.margin>
-            </ImageView>
-         </left>
-         <center>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo John Doe - johndoe@example.com" wrappingWidth="327.779296875" BorderPane.alignment="CENTER_LEFT">
-               <BorderPane.margin>
-                  <Insets left="20.0" />
-               </BorderPane.margin>
-            </Text>
-         </center>
-         <right>
-            <JFXButton text="Sair" textFill="WHITE" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets right="20.0" />
-               </BorderPane.margin>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-         </right>
-      </BorderPane>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.CardapioController">
    <center>
       <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
@@ -67,14 +34,14 @@
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" text="Nome" />
                         <Label text="Valor" GridPane.columnIndex="1" />
-                        <Label text="Hot Dog Simples" GridPane.rowIndex="1" />
-                        <Label text="Hot Dog Plus" GridPane.rowIndex="2" />
-                        <Label text="Hot Dog Master" GridPane.rowIndex="3" />
-                        <Label text="Hot Dog Master Plus" GridPane.rowIndex="4" />
-                        <Label text="R$ 5, 00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="R$ 8,50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="R$ 10,00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="R$ 25,00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="productFoodLabel" text="Product Title" GridPane.rowIndex="1" />
+                        <Label text="Product Title" GridPane.rowIndex="2" />
+                        <Label text="Product Title" GridPane.rowIndex="3" />
+                        <Label text="Product Title" GridPane.rowIndex="4" />
+                        <Label fx:id="productFoodValue" text="value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                   <Text layoutX="184.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hot Dogs" AnchorPane.topAnchor="20.0" />
@@ -98,16 +65,16 @@
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" GridPane.columnIndex="1" />
-                        <Label text="Coca-Cola Lata" GridPane.rowIndex="1" />
-                        <Label text="Fanta Laranja Lata" GridPane.rowIndex="2" />
-                        <Label text="Água com Gás" GridPane.rowIndex="3" />
-                        <Label text="Água sem Gás" GridPane.rowIndex="4" />
-                        <Label text="Suco Natural" GridPane.rowIndex="5" />
-                        <Label text="R$ 3,50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="R$ 3,50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="R$ 2,00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="R$ 3,50" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label text="R$ 4,00" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="productDrinkLabel" text="Product Title" GridPane.rowIndex="1" />
+                        <Label text="Product Title" GridPane.rowIndex="2" />
+                        <Label text="Product Title" GridPane.rowIndex="3" />
+                        <Label text="Product Title" GridPane.rowIndex="4" />
+                        <Label text="Product Title" GridPane.rowIndex="5" />
+                        <Label fx:id="productDrinkValue" text="value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="value" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                   <Text layoutX="184.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bebidas" AnchorPane.topAnchor="20.0" />
@@ -118,17 +85,14 @@
    </center>
    <bottom>
       <BorderPane prefHeight="167.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-         <bottom>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2017 - Wilterson Garcia | Ivanilson Lino" BorderPane.alignment="CENTER" />
-         </bottom>
          <center>
             <VBox alignment="CENTER" prefHeight="102.0" prefWidth="552.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="31.0" prefWidth="540.0" style="-fx-background-color: #009688;" text="Comprar" textFill="WHITE">
+                  <JFXButton fx:id="btnBuy" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#showBuy" prefHeight="31.0" prefWidth="540.0" style="-fx-background-color: #009688;" text="Comprar" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></JFXButton>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="31.0" prefWidth="540.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE">
+                  <JFXButton fx:id="btnBack" alignment="CENTER" buttonType="RAISED" onAction="#backToHome" prefHeight="31.0" prefWidth="540.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>

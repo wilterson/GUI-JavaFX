@@ -28,7 +28,7 @@
         <email>bruce@example.com</email>
         <birthday>13/06/1956</birthday>
         <cpf>45678996312</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -39,7 +39,7 @@
         <email>clark@example.com</email>
         <birthday>05/09/1989</birthday>
         <cpf>96336985233</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -50,7 +50,7 @@
         <email>diana@example.com</email>
         <birthday>20/12/1990</birthday>
         <cpf>45685232147</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -61,7 +61,7 @@
         <email>barry@example.com</email>
         <birthday>30/09/1985</birthday>
         <cpf>74125855547</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -72,7 +72,7 @@
         <email>sladewilson@example.com</email>
         <birthday>20/04/1995</birthday>
         <cpf>78912333369</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -83,7 +83,7 @@
         <email>lex@luthorcorp.org</email>
         <birthday>04/01/1986</birthday>
         <cpf>12378944455</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -94,7 +94,7 @@
         <email>harleyquinn@example.com</email>
         <birthday>05/05/1991</birthday>
         <cpf>42336874599</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -105,7 +105,7 @@
         <email>karadanvers@example.com</email>
         <birthday>12/12/1990</birthday>
         <cpf>95175336999</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -116,7 +116,7 @@
         <email>oliver@queen.org</email>
         <birthday>02/11/1989</birthday>
         <cpf>88857412333</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 
@@ -127,7 +127,7 @@
         <email>laurel@example.com</email>
         <birthday>10/11/1987</birthday>
         <cpf>55882211126</cpf>
-        <senha>654321</senha>
+        <senha>123456</senha>
         <created_at>11/06/2017</created_at>
     </user>
 

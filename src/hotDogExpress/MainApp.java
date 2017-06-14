@@ -1,11 +1,10 @@
 package hotDogExpress;
 
 import hotDogExpress.util.Singleton;
-import hotDogExpress.views.HomeController;
-import hotDogExpress.views.LoginController;
-import hotDogExpress.views.RootLayoutController;
+import hotDogExpress.views.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -14,18 +13,24 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static javafx.application.Application.launch;
 
 /**
  * Created by Wilterson on 05/06/2017.
  */
-public class MainApp extends Application {
+public class MainApp extends Application implements Initializable{
 
     private Stage window;
-    private Singleton app;
+    private Singleton app = Singleton.getInstance();
     private BorderPane rootLayout;
     private RootLayoutController rootController;
+
+    public MainApp() throws FileNotFoundException {
+        app = Singleton.getInstance();
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -35,27 +40,39 @@ public class MainApp extends Application {
         showLogin();
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            this.app = Singleton.getInstance();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void showLogin() {
         try {
+            // Carrega o person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Login.fxml"));
-            AnchorPane page = loader.load();
+            AnchorPane page = (AnchorPane) loader.load();
 
-            window.setTitle("Login");
-
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Login");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
             Scene scene = new Scene(page);
-            window.setScene(scene);
+            dialogStage.setScene(scene);
 
+            // Define a pessoa no controller.
             LoginController controller = loader.getController();
-            controller.setWindow(window);
+            controller.setWindow(dialogStage);
             controller.setMainApp(this);
 
-            window.showAndWait();
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
 
-            showHome();
             if (controller.isLogged()) {
-                app.setUserActive(controller.getUserActive());
-                System.out.println("LOGGED!!!");
                 initRootLayout();
                 showHome();
             }
@@ -66,20 +83,25 @@ public class MainApp extends Application {
 
     private void showHome() {
         try {
+            // Carrega o person overview.
             FXMLLoader loader = new FXMLLoader();
 
-            if(app.getUserActive().getRole().equals("admin")) {
+            if(app.getUserActive().getRole().equals("admin")){
                 loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/MenuAdmin.fxml"));
-            }else if(app.getUserActive().getRole().equals("employee")) {
+
+            }else if(app.getUserActive().getRole().equals("employee")){
                 loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/MenuEmployee.fxml"));
+
             }else{
                 loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/MenuClient.fxml"));
             }
 
-            AnchorPane homeWindow = loader.load();
-            rootLayout.setCenter(homeWindow);
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
             HomeController controller = loader.getController();
             controller.setMainApp(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -104,5 +126,31 @@ public class MainApp extends Application {
 
     public static void main(String[] args) throws FileNotFoundException {
         launch(args);
+    }
+
+    public void logout() {
+        window.hide();
+        showLogin();
+    }
+
+    public void initCardapio() throws IOException {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Cardapio.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            CardapioController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void backHome() {
+        showHome();
     }
 }

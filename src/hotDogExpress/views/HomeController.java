@@ -2,10 +2,28 @@ package hotDogExpress.views;
 
 import com.jfoenix.controls.JFXButton;
 import hotDogExpress.MainApp;
+import hotDogExpress.util.Singleton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
-public class HomeController {
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HomeController implements Initializable{
+
+    private Stage window;
+    private Singleton app;
+    private MainApp mainApp;
+    private BorderPane rootLayout;
 
     @FXML
     private JFXButton btnSellsReport;
@@ -33,7 +51,40 @@ public class HomeController {
 
     @FXML
     private JFXButton btnSystemLog;
-    private MainApp mainApp;
+
+    @FXML
+    private JFXButton btnViewFoodMenu;
+
+    @FXML
+    private JFXButton btnBuy;
+
+    @FXML
+    private JFXButton btnMyReport;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            this.app = Singleton.getInstance();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void showBuy(ActionEvent event) {
+
+    }
+
+    @FXML
+    void showClientReport(ActionEvent event) {
+
+    }
+
+    @FXML
+    void showFoodMenu(ActionEvent event) throws IOException {
+        mainApp.initCardapio();
+    }
+
 
     @FXML
     void showClients(ActionEvent event) {

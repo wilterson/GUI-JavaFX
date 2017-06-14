@@ -71,7 +71,7 @@ public class LoginController implements Initializable{
     public void login(ActionEvent actionEvent) {
         if(doLogin()){
             this.isLogged = true;
-//            window.close();
+            window.close();
         }
     }
 
@@ -133,11 +133,7 @@ public class LoginController implements Initializable{
     }
 
     private void setUserActive(User userActive) {
-        this.userActive = userActive;
-    }
-
-    public User getUserActive(){
-        return this.userActive;
+        app.setUserActive(userActive);
     }
 
     public void setWindow(Stage windows) {
