@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.RootLayoutController">
+    <top>
+        <BorderPane prefHeight="86.0" prefWidth="800.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+            <left>
+                <ImageView fitHeight="64.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../resources/logo.png" />
+                    </image>
+                    <BorderPane.margin>
+                        <Insets left="15.0" />
+                    </BorderPane.margin>
+                </ImageView>
+            </left>
+            <right>
+                <JFXButton text="Sair" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets right="20.0" />
+                    </BorderPane.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </right>
+            <center>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem Vindo" />
+                        <Label fx:id="labelUserName" text="NomeUser" textFill="WHITE">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </Label>
+                        <Label fx:id="labelUserEmail" text="(EmailUser)" textFill="WHITE">
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                </HBox>
+            </center>
+        </BorderPane>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" />
+    </center>
+    <bottom>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2017 - Wilterson Garcia | Ivanilson Lino" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="50.0" />
+            </BorderPane.margin>
+        </Text>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="200.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.HomeController">
+    <center>
+        <VBox alignment="CENTER" prefHeight="224.0" prefWidth="576.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="btnAddMenuItem" buttonType="RAISED" onAction="#showAddItem" prefHeight="31.0"
+                           prefWidth="570.0" style="-fx-background-color: #009688;" text="Cadastrar Item no Cardápio"
+                           textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnStorageRequest" buttonType="RAISED" onAction="#showStorageRequest"
+                           prefHeight="31.0" prefWidth="570.0" style="-fx-background-color: #009688;"
+                           text="Solicitar Aquisição de Material" textFill="WHITE">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets top="25.0"/>
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btntorage" buttonType="RAISED" onAction="#showStorage" prefHeight="31.0"
+                           prefWidth="570.0" style="-fx-background-color: #009688;" text="Estoque" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets top="25.0"/>
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnSystemLog" buttonType="RAISED" onAction="#showSystemLog" prefHeight="31.0"
+                           prefWidth="570.0" style="-fx-background-color: #009688;" text="Log" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets top="25.0"/>
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
