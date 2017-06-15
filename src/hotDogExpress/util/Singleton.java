@@ -5,6 +5,8 @@
 package hotDogExpress.util;
 
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import hotDogExpress.models.Product;
+import hotDogExpress.models.ProductObservable;
 import hotDogExpress.models.User;
 import hotDogExpress.models.lists.ProductList;
 import hotDogExpress.models.lists.UserList;
@@ -26,7 +28,8 @@ public class Singleton{
 
     private UserList users;
     private ProductList products;
-    private User userActive = new User(0,null, null, null, null, null, null, null);;
+    private User userActive = new User(0,null, null, null, null, null, null, null, null);;
+    private List<User> usersClients;
 
     private Singleton() throws FileNotFoundException {
 
@@ -44,7 +47,7 @@ public class Singleton{
         users = (UserList) stream.fromXML(new FileInputStream(fileUsers));
         products = (ProductList) stream.fromXML(new FileInputStream(fileProducts));
 
-        userActive = new User(0,null, null, null, null, null, null, null);
+        userActive = new User(0,null, null, null, null, null, null, null, null);
     }
 
     public static Singleton getInstance() throws FileNotFoundException {
@@ -70,12 +73,36 @@ public class Singleton{
         this.userActive = userActive;
     }
 
-    public ProductList getProducts() {
-        return products;
+    public List<Product> getProducts() {
+        return products.getProducts();
     }
 
     public void setProducts(ProductList products) {
         this.products = products;
+    }
+
+    public List<User> getUsersClients() {
+        List<User> clients = new ArrayList<>();
+
+        for (User user : users.getUsers()){
+            if(user.getRole().equals("client")){
+                clients.add(user);
+            }
+        }
+
+        return clients;
+    }
+
+    public List<User> getUsersEmployees() {
+        List<User> employees = new ArrayList<>();
+
+        for (User user : users.getUsers()){
+            if((user.getRole().equals("admin")) || (user.getRole().equals("employee"))){
+                employees.add(user);
+            }
+        }
+
+        return employees;
     }
 }
 

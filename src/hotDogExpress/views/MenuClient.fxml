@@ -15,7 +15,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnBuy" buttonType="RAISED" onAction="#showBuy" prefHeight="31.0" prefWidth="570.0" style="-fx-background-color: #009688;" text="Comprar" textFill="WHITE">
+            <JFXButton fx:id="btnBuy" buttonType="RAISED" contentDisplay="CENTER" onAction="#showBuy" prefHeight="31.0" prefWidth="570.0" style="-fx-background-color: #009688;" text="Comprar" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

@@ -54,7 +54,7 @@ public class RootLayoutController implements Initializable {
     }
 
     public void logout(ActionEvent actionEvent) {
-        app.setUserActive(new User(0, null, null, null, null, null, null, null));
+        app.setUserActive(new User(0, null, null, null, null, null, null, null, null));
         mainApp.logout();
     }
 }

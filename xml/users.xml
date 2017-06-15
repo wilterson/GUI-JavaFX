@@ -3,7 +3,8 @@
         <id>1</id>
         <role>admin</role>
         <nome>Wilterson Garcia</nome>
-        <email>wiltersongarcia@gmail.com</email>
+        <department>Diretoria</department>
+        <email>wilterson@example.com</email>
         <birthday>05/04/1995</birthday>
         <cpf>05430939994</cpf>
         <senha>123456</senha>
@@ -12,8 +13,9 @@
 
     <user>
         <id>2</id>
-        <role>user</role>
+        <role>admin</role>
         <nome>Ivanilson Adelino</nome>
+        <department>Diretoria</department>
         <email>ivanilson@gmail.com</email>
         <birthday>20/06/1992</birthday>
         <cpf>45678855612</cpf>
@@ -25,6 +27,7 @@
         <id>3</id>
         <role>employee</role>
         <nome>Bruce Wayne</nome>
+        <department>Vendas</department>
         <email>bruce@example.com</email>
         <birthday>13/06/1956</birthday>
         <cpf>45678996312</cpf>
@@ -36,6 +39,7 @@
         <id>4</id>
         <role>employee</role>
         <nome>Clark Kent</nome>
+        <department>Vendas</department>
         <email>clark@example.com</email>
         <birthday>05/09/1989</birthday>
         <cpf>96336985233</cpf>
@@ -47,6 +51,7 @@
         <id>5</id>
         <role>employee</role>
         <nome>Diana Prince</nome>
+        <department>Vendas</department>
         <email>diana@example.com</email>
         <birthday>20/12/1990</birthday>
         <cpf>45685232147</cpf>
@@ -58,6 +63,7 @@
         <id>6</id>
         <role>employee</role>
         <nome>Barry Allen</nome>
+        <department>Cozinha</department>
         <email>barry@example.com</email>
         <birthday>30/09/1985</birthday>
         <cpf>74125855547</cpf>
@@ -69,6 +75,7 @@
         <id>7</id>
         <role>employee</role>
         <nome>Slade Wilson</nome>
+        <department>Cozinha</department>
         <email>sladewilson@example.com</email>
         <birthday>20/04/1995</birthday>
         <cpf>78912333369</cpf>
@@ -80,6 +87,7 @@
         <id>8</id>
         <role>employee</role>
         <nome>Lex Luthor</nome>
+        <department>Cozinha</department>
         <email>lex@luthorcorp.org</email>
         <birthday>04/01/1986</birthday>
         <cpf>12378944455</cpf>
@@ -91,6 +99,7 @@
         <id>9</id>
         <role>employee</role>
         <nome>Harleen Quinzel</nome>
+        <department>Serviços Gerais</department>
         <email>harleyquinn@example.com</email>
         <birthday>05/05/1991</birthday>
         <cpf>42336874599</cpf>
@@ -102,6 +111,7 @@
         <id>10</id>
         <role>employee</role>
         <nome>Kara Danvers</nome>
+        <department>Serviços Gerais</department>
         <email>karadanvers@example.com</email>
         <birthday>12/12/1990</birthday>
         <cpf>95175336999</cpf>
@@ -113,6 +123,7 @@
         <id>11</id>
         <role>employee</role>
         <nome>Oliver Queen</nome>
+        <department>Financeiro</department>
         <email>oliver@queen.org</email>
         <birthday>02/11/1989</birthday>
         <cpf>88857412333</cpf>
@@ -124,6 +135,7 @@
         <id>12</id>
         <role>employee</role>
         <nome>Laurel Lance</nome>
+        <department>Recursos Humanos</department>
         <email>laurel@example.com</email>
         <birthday>10/11/1987</birthday>
         <cpf>55882211126</cpf>
@@ -135,6 +147,7 @@
         <id>13</id>
         <role>client</role>
         <nome>Frank Castle</nome>
+        <department>client</department>
         <email>frank@example.com</email>
         <birthday>12/05/1986</birthday>
         <cpf>0326987412</cpf>
@@ -146,6 +159,7 @@
         <id>14</id>
         <role>client</role>
         <nome>Matt Murdock</nome>
+        <department>client</department>
         <email>matt@example.com</email>
         <birthday>05/05/1990</birthday>
         <cpf>05487456988</cpf>
@@ -157,6 +171,7 @@
         <id>15</id>
         <role>client</role>
         <nome>Jessica Jones</nome>
+        <department>client</department>
         <email>jessica@example.com</email>
         <birthday>10/01/1980</birthday>
         <cpf>1284887452</cpf>
@@ -168,6 +183,7 @@
         <id>16</id>
         <role>client</role>
         <nome>Elektra Natchios</nome>
+        <department>client</department>
         <email>elektra@example.com</email>
         <birthday>30/09/1970</birthday>
         <cpf>0549874563</cpf>
@@ -179,6 +195,7 @@
         <id>17</id>
         <role>client</role>
         <nome>Danny Rand</nome>
+        <department>client</department>
         <email>danny@example.com</email>
         <birthday>20/04/1995</birthday>
         <cpf>03245698777</cpf>
@@ -190,6 +207,7 @@
         <id>18</id>
         <role>client</role>
         <nome>Wilson Fisk</nome>
+        <department>client</department>
         <email>wilson@example.com</email>
         <birthday>28/05/1986</birthday>
         <cpf>12398745633</cpf>
@@ -201,6 +219,7 @@
         <id>19</id>
         <role>client</role>
         <nome>Luke Cage</nome>
+        <department>client</department>
         <email>luke@example.com</email>
         <birthday>05/05/1979</birthday>
         <cpf>06345698744</cpf>
@@ -212,6 +231,7 @@
         <id>20</id>
         <role>client</role>
         <nome>Claire Temple</nome>
+        <department>client</department>
         <email>claire@example.com</email>
         <birthday>12/12/1990</birthday>
         <cpf>12365587444</cpf>
@@ -223,6 +243,7 @@
         <id>21</id>
         <role>client</role>
         <nome>Foggy Nelson</nome>
+        <department>client</department>
         <email>foggy@example.com</email>
         <birthday>05/12/1989</birthday>
         <cpf>15975336999</cpf>
@@ -234,6 +255,7 @@
         <id>22</id>
         <role>client</role>
         <nome>Karen Page</nome>
+        <department>client</department>
         <email>karen@example.com</email>
         <birthday>01/01/1988</birthday>
         <cpf>75395178955</cpf>
@@ -245,6 +267,7 @@
         <id>23</id>
         <role>client</role>
         <nome>Steve Rogers</nome>
+        <department>client</department>
         <email>steve@example.com</email>
         <birthday>04/07/1920</birthday>
         <cpf>75395178955</cpf>

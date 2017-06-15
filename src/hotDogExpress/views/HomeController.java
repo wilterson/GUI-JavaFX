@@ -88,12 +88,12 @@ public class HomeController implements Initializable{
 
     @FXML
     void showClients(ActionEvent event) {
-
+        mainApp.iniClients();
     }
 
     @FXML
     void showEmployees(ActionEvent event) {
-
+        mainApp.initEmployees();
     }
 
     @FXML

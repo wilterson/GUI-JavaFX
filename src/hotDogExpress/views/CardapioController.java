@@ -5,15 +5,24 @@
 package hotDogExpress.views;
 
 import com.jfoenix.controls.JFXButton;
+import com.sun.security.ntlm.Client;
 import hotDogExpress.MainApp;
 import hotDogExpress.models.Product;
+import hotDogExpress.models.ProductObservable;
+import hotDogExpress.models.lists.ProductList;
+import hotDogExpress.util.Singleton;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -23,6 +32,8 @@ public class CardapioController implements Initializable{
 
     private MainApp mainApp;
 
+    private Singleton app;
+
     private Stage window;
 
     private List<Product> products;
@@ -30,16 +41,28 @@ public class CardapioController implements Initializable{
     private ObservableList<Product> productsObservableList;
 
     @FXML
-    private Label productFoodLabel;
+    private TableView<Product> foodTable;
 
     @FXML
-    private Label productFoodValue;
+    private TableColumn<ProductObservable, String> foodCodColumn;
 
     @FXML
-    private Label productDrinkLabel;
+    private TableColumn<ProductObservable, String> foodNameColumn;
 
     @FXML
-    private Label productDrinkValue;
+    private TableColumn<ProductObservable, String> foodPriceColumn;
+
+    @FXML
+    private TableView<Product> drinkTable;
+
+    @FXML
+    private TableColumn<ProductObservable, String> drinkCodColumn;
+
+    @FXML
+    private TableColumn<ProductObservable, String> drinkNameColumn;
+
+    @FXML
+    private TableColumn<ProductObservable, String> drinkPriceColumn;
 
     @FXML
     private JFXButton btnBuy;
@@ -49,7 +72,22 @@ public class CardapioController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            this.app = Singleton.getInstance();
+            carregarTableViewCardapio();
+//            foodCodColumn.setCellValueFactory(cellData -> cellData.getValue().productCodProperty());
+//            foodNameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+//            foodPriceColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
 
+//            mostraDetalhes(null);
+
+//            veiculoTable.getSelectionModel().selectedItemProperty().addListener(
+//                    (observable, oldValue, newValue) -> mostraDetalhes(newValue));
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+
+        }
     }
 
     @FXML
@@ -70,4 +108,15 @@ public class CardapioController implements Initializable{
         this.window = window;
     }
 
+    public void carregarTableViewCardapio() {
+
+        foodCodColumn.setCellValueFactory(new PropertyValueFactory<>("productCod"));
+        foodNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        foodPriceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        List<Product> listProducts = app.getProducts();
+
+        productsObservableList = FXCollections.observableArrayList(listProducts);
+        foodTable.setItems(productsObservableList);
+    }
 }

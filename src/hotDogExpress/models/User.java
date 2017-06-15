@@ -4,20 +4,22 @@
 
 package hotDogExpress.models;
 
+
 import java.util.Date;
 
 public class User {
 
     private final int id;
-    private String role;
+    private final String role;
     private final String nome;
     private final String email;
     private final String senha;
     private final Date birthday;
     private final String cpf;
     private final Date created_at;
+    private final String department;
 
-    public User(int id, String role, String nome, String email, String senha, Date birthday, String cpf, Date created_at) {
+    public User(int id, String role, String nome, String email, String senha, Date birthday, String cpf, Date created_at, String department) {
         this.id = id;
         this.role = role;
         this.nome = nome;
@@ -26,6 +28,7 @@ public class User {
         this.birthday = birthday;
         this.cpf = cpf;
         this.created_at = created_at;
+        this.department = department;
     }
 
     public int getId() {
@@ -34,10 +37,6 @@ public class User {
 
     public String getRole() {
         return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public String getNome() {
@@ -63,4 +62,9 @@ public class User {
     public Date getCreated_at() {
         return created_at;
     }
+
+    public String getDepartment() {
+        return department;
+    }
+
 }

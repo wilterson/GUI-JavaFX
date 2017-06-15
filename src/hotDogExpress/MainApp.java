@@ -153,4 +153,38 @@ public class MainApp extends Application implements Initializable{
     public void backHome() {
         showHome();
     }
+
+    public void iniClients() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Clients.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            ClientController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void initEmployees() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Employees.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            EmployeeController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 }
