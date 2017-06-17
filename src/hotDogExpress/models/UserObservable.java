@@ -37,16 +37,50 @@ public class UserObservable {
         this.department = department;
     }
 
+//    public UserObservable(User user){
+//        this.id = new SimpleIntegerProperty(user.getId());
+//        this.role = new SimpleStringProperty(user.getRole());
+//        this.nome = new SimpleStringProperty(user.getNome());
+//        this.email = new SimpleStringProperty(user.getEmail());
+//        this.senha = new SimpleStringProperty(user.getSenha());
+//        this.cpf = new SimpleStringProperty(user.getCpf());
+//        this.department = new SimpleStringProperty(user.getDepartment());
+//        this.birthday= new SimpleObjectProperty<LocalDate>(user.getBirthday());
+//        this.created_at = new SimpleObjectProperty<LocalDate>(user.getCreated_at());
+//    }
+
     public UserObservable(User user){
-        this.id = new SimpleIntegerProperty(user.getId());
-        this.role = new SimpleStringProperty(user.getRole());
-        this.nome = new SimpleStringProperty(user.getNome());
-        this.email = new SimpleStringProperty(user.getEmail());
-        this.senha = new SimpleStringProperty(user.getSenha());
-        this.cpf = new SimpleStringProperty(user.getCpf());
-        this.department = new SimpleStringProperty(user.getDepartment());
-        this.birthday= new SimpleObjectProperty<LocalDate>(user.getBirthday());
-        this.created_at = new SimpleObjectProperty<LocalDate>(user.getCreated_at());
+        this.id = new SimpleIntegerProperty();
+        this.role = new SimpleStringProperty();
+        this.nome = new SimpleStringProperty();
+        this.email = new SimpleStringProperty();
+        this.senha = new SimpleStringProperty();
+        this.cpf = new SimpleStringProperty();
+        this.department = new SimpleStringProperty();
+        this.birthday= new SimpleObjectProperty<LocalDate>();
+        this.created_at = new SimpleObjectProperty<LocalDate>();
+
+        this.id.set(user.getId());
+        this.role.set(user.getRole());
+        this.nome.set(user.getNome());
+        this.email.set(user.getEmail());
+        this.senha.set(user.getSenha());
+        this.cpf.set(user.getCpf());
+        this.department.set(user.getDepartment());
+        this.birthday.set(user.getBirthday());
+        this.created_at.set(user.getCreated_at());
+    }
+
+    public UserObservable() {
+        this.id = new SimpleIntegerProperty();
+        this.role= new SimpleStringProperty();
+        this.nome = new SimpleStringProperty();
+        this.email = new SimpleStringProperty();
+        this.senha = new SimpleStringProperty("");
+        this.cpf = new SimpleStringProperty("");
+        this.department = new SimpleStringProperty("");
+        this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1990, 1, 1));
+        this.created_at = new SimpleObjectProperty<LocalDate>(LocalDate.of(1990, 1, 1));
     }
 
     public int getId() {

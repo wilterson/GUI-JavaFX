@@ -101,7 +101,6 @@
             </SplitPane>
             <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0">
                <buttons>
-                  <JFXButton fx:id="btnAddNew" alignment="CENTER" contentDisplay="CENTER" onAction="#addNewClient" style="-fx-background-color: #009688;" text="Novo" textFill="WHITE" />
                   <JFXButton fx:id="btnEdit" alignment="CENTER" contentDisplay="CENTER" onAction="#editClient" style="-fx-background-color: #009688;" text="Editar" textFill="WHITE" />
                   <JFXButton fx:id="btnRemove" alignment="CENTER" contentDisplay="CENTER" onAction="#removeClient" style="-fx-background-color: #009688;" text="Remover" textFill="WHITE" />
                   <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" onAction="#backHome" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE" />

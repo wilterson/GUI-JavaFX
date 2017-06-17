@@ -12,17 +12,6 @@
         <department>Diretoria</department>
     </user>
     <user>
-        <id>2</id>
-        <role>admin</role>
-        <nome>Ivanilson Adelino</nome>
-        <email>ivanilson@gmail.com</email>
-        <senha>123456</senha>
-        <birthday>1992-06-20</birthday>
-        <cpf>45678855612</cpf>
-        <created__at>2017-06-12</created__at>
-        <department>Diretoria</department>
-    </user>
-    <user>
         <id>3</id>
         <role>employee</role>
         <nome>Bruce Wayne</nome>

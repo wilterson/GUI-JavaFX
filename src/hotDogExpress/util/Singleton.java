@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static java.lang.Integer.max;
+
 public class Singleton{
 
     private static Singleton Instance;
@@ -111,10 +113,19 @@ public class Singleton{
         return employees;
     }
 
-    public void saveClients(List<User> users) throws FileNotFoundException {
+    public void saveUsers(List<User> users) throws FileNotFoundException {
         XStream stream = getXStream();
         stream.alias("user", User.class);
         stream.toXML(users, new FileOutputStream("xml/users.xml"));
+    }
+
+    public int getLastInsertedId() {
+        int id = 0;
+        for (int i = 0; i < users.getUsers().size(); i++) {
+            id = max(id, users.getUsers().get(i).getId());
+        }
+        id++;
+        return id;
     }
 }
 

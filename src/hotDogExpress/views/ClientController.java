@@ -5,6 +5,8 @@
 package hotDogExpress.views;
 
 import com.jfoenix.controls.JFXButton;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import hotDogExpress.MainApp;
 import hotDogExpress.models.UserObservable;
 import hotDogExpress.models.User;
@@ -17,9 +19,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ClientController implements Initializable{
     private MainApp mainApp;
@@ -107,11 +113,6 @@ public class ClientController implements Initializable{
     }
 
     @FXML
-    void addNewClient(ActionEvent event) {
-
-    }
-
-    @FXML
     void editClient(ActionEvent event) throws FileNotFoundException {
         UserObservable user = tableViewClients.getSelectionModel().getSelectedItem();
         if (user != null) {
@@ -141,7 +142,7 @@ public class ClientController implements Initializable{
                 app.setUsers(users);
 
                 try {
-                    app.saveClients(users);
+                    app.saveUsers(users);
                 }catch(FileNotFoundException e){
                     System.out.println("Erro ao salvar clientes: " + e);
                 }
@@ -158,8 +159,38 @@ public class ClientController implements Initializable{
     }
 
     @FXML
-    void removeClient(ActionEvent event) {
+    void removeClient(ActionEvent event) throws FileNotFoundException {
+        int selectedIndex = tableViewClients.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            Alert alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
+            alertConfirm.setTitle("Excluir Cliente");
+            alertConfirm.setHeaderText("Deseja excluir ?");
 
+            Optional<ButtonType> choice = alertConfirm.showAndWait();
+
+            if (choice.get() == ButtonType.OK) {
+                UserObservable user = tableViewClients.getSelectionModel().getSelectedItem();
+
+                List<User> users = app.getUsers();
+                for (int i = 0; i < users.size(); i++) {
+                    User userTemp = users.get(i);
+                    if (userTemp.getId() == user.getId()) {
+                        users.remove(selectedIndex);
+                        break;
+                    }
+                }
+
+                app.setUsers(users);
+                app.saveUsers(users);
+                tableViewClients.getItems().remove(selectedIndex);
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Nenhum Cliente Selecionado");
+            alert.setContentText("Selecione o cliente que deseja excluir.");
+            alert.showAndWait();
+        }
     }
 
     public void setMainApp(MainApp mainApp) {

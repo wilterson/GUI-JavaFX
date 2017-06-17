@@ -34,6 +34,30 @@ public class User {
         this.department = department;
     }
 
+    public User(User user){
+        this.id = user.id;
+        this.role = user.role;
+        this.nome = user.nome;
+        this.email = user.email;
+        this.senha = user.senha;
+        this.birthday = user.birthday;
+        this.cpf = user.cpf;
+        this.created_at = user.created_at;
+        this.department = user.department;
+    }
+
+    public User(){
+        this.id = 0;
+        this.role = "";
+        this.nome = "";
+        this.email = "";
+        this.senha = "";
+        this.birthday = null;
+        this.cpf = "";
+        this.created_at = null;
+        this.department = "";
+    }
+
     public int getId() {
         return id;
     }
