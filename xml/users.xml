@@ -1,1 +1,255 @@
-<?xml version="1.0" ?><list><hotDogExpress.models.User><id>1</id><role>admin</role><nome>Wilterson Garcia</nome><email>wilterson@example.com</email><senha>123456</senha><birthday>1995-05-04</birthday><cpf>05430939994</cpf><created__at>2017-06-12</created__at><department>Diretoria</department></hotDogExpress.models.User><hotDogExpress.models.User><id>2</id><role>admin</role><nome>Ivanilson Adelino</nome><email>ivanilson@gmail.com</email><senha>123456</senha><birthday>1992-06-20</birthday><cpf>45678855612</cpf><created__at>2017-06-12</created__at><department>Diretoria</department></hotDogExpress.models.User><hotDogExpress.models.User><id>3</id><role>employee</role><nome>Bruce Wayne</nome><email>bruce@example.com</email><senha>123456</senha><birthday>1956-06-13</birthday><cpf>45678996312</cpf><created__at>2017-06-11</created__at><department>Vendas</department></hotDogExpress.models.User><hotDogExpress.models.User><id>4</id><role>employee</role><nome>Clark Kent</nome><email>clark@example.com</email><senha>123456</senha><birthday>1989-09-05</birthday><cpf>96336985233</cpf><created__at>2017-06-11</created__at><department>Vendas</department></hotDogExpress.models.User><hotDogExpress.models.User><id>5</id><role>employee</role><nome>Diana Prince</nome><email>diana@example.com</email><senha>123456</senha><birthday>1990-12-20</birthday><cpf>45685232147</cpf><created__at>2017-06-11</created__at><department>Vendas</department></hotDogExpress.models.User><hotDogExpress.models.User><id>6</id><role>employee</role><nome>Barry Allen</nome><email>barry@example.com</email><senha>123456</senha><birthday>1985-09-30</birthday><cpf>74125855547</cpf><created__at>2017-06-11</created__at><department>Cozinha</department></hotDogExpress.models.User><hotDogExpress.models.User><id>7</id><role>employee</role><nome>Slade Wilson</nome><email>sladewilson@example.com</email><senha>123456</senha><birthday>1995-04-20</birthday><cpf>78912333369</cpf><created__at>2017-06-11</created__at><department>Cozinha</department></hotDogExpress.models.User><hotDogExpress.models.User><id>8</id><role>employee</role><nome>Lex Luthor</nome><email>lex@luthorcorp.org</email><senha>123456</senha><birthday>1986-01-04</birthday><cpf>12378944455</cpf><created__at>2017-06-11</created__at><department>Cozinha</department></hotDogExpress.models.User><hotDogExpress.models.User><id>9</id><role>employee</role><nome>Harleen Quinzel</nome><email>harleyquinn@example.com</email><senha>123456</senha><birthday>1991-05-05</birthday><cpf>42336874599</cpf><created__at>2017-06-11</created__at><department>Serviços Gerais</department></hotDogExpress.models.User><hotDogExpress.models.User><id>10</id><role>employee</role><nome>Kara Danvers</nome><email>karadanvers@example.com</email><senha>123456</senha><birthday>1990-12-12</birthday><cpf>95175336999</cpf><created__at>2017-06-11</created__at><department>Serviços Gerais</department></hotDogExpress.models.User><hotDogExpress.models.User><id>11</id><role>employee</role><nome>Oliver Queen</nome><email>oliver@queen.org</email><senha>123456</senha><birthday>1989-11-02</birthday><cpf>88857412333</cpf><created__at>2017-06-11</created__at><department>Financeiro</department></hotDogExpress.models.User><hotDogExpress.models.User><id>12</id><role>employee</role><nome>Laurel Lance</nome><email>laurel@example.com</email><senha>123456</senha><birthday>1987-11-10</birthday><cpf>55882211126</cpf><created__at>2017-06-11</created__at><department>Recursos Humanos</department></hotDogExpress.models.User><hotDogExpress.models.User><id>13</id><role>client</role><nome>Frank Castle</nome><email>frank@example.com</email><senha>123456</senha><birthday>1986-05-12</birthday><cpf>0326987412</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>14</id><role>client</role><nome>Matt Murdock dos Santos</nome><email>matt@example.com</email><senha>123456</senha><birthday>1990-05-05</birthday><cpf>05487456988</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>15</id><role>client</role><nome>Jessica Jones</nome><email>jessica@example.com.br</email><senha>123456</senha><birthday>1980-01-10</birthday><cpf>1284887452</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>16</id><role>client</role><nome>Elektra Natchios</nome><email>elektra@example.com</email><senha>123456</senha><birthday>1970-09-30</birthday><cpf>0549874563</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>17</id><role>client</role><nome>Danny Rand</nome><email>danny@example.com</email><senha>123456</senha><birthday>1995-04-20</birthday><cpf>03245698777</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>18</id><role>client</role><nome>Wilson Fisk</nome><email>wilson@example.com</email><senha>123456</senha><birthday>1986-05-28</birthday><cpf>12398745633</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>19</id><role>client</role><nome>Luke Cage</nome><email>luke@example.com</email><senha>123456</senha><birthday>1979-05-05</birthday><cpf>06345698744</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>20</id><role>client</role><nome>Claire Temple</nome><email>claire@example.com</email><senha>123456</senha><birthday>1990-02-13</birthday><cpf>12365587444</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>21</id><role>client</role><nome>Foggy Nelson</nome><email>foggy@example.com</email><senha>123456</senha><birthday>1989-09-12</birthday><cpf>15975336999</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>22</id><role>client</role><nome>Karen Page</nome><email>karen@example.com</email><senha>123456</senha><birthday>1988-04-11</birthday><cpf>75395178955</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User><hotDogExpress.models.User><id>23</id><role>client</role><nome>Steve Rogers</nome><email>steve@example.com</email><senha>123456</senha><birthday>1920-07-04</birthday><cpf>75395178955</cpf><created__at>2017-06-10</created__at><department>client</department></hotDogExpress.models.User></list>
+<users>
+    <user>
+        <id>1</id>
+        <role>admin</role>
+        <nome>Wilterson Garcia</nome>
+        <email>wilterson@example.com</email>
+        <senha>123456</senha>
+        <birthday>1995-05-04</birthday>
+        <cpf>05430939994</cpf>
+        <created__at>2017-06-12</created__at>
+        <department>Diretoria</department>
+    </user>
+    <user>
+        <id>2</id>
+        <role>admin</role>
+        <nome>Ivanilson Adelino</nome>
+        <email>ivanilson@gmail.com</email>
+        <senha>123456</senha>
+        <birthday>1992-06-20</birthday>
+        <cpf>45678855612</cpf>
+        <created__at>2017-06-12</created__at>
+        <department>Diretoria</department>
+    </user>
+    <user>
+        <id>3</id>
+        <role>employee</role>
+        <nome>Bruce Wayne</nome>
+        <email>bruce@example.com</email>
+        <senha>123456</senha>
+        <birthday>1956-06-13</birthday>
+        <cpf>45678996312</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Vendas</department>
+    </user>
+    <user>
+        <id>4</id>
+        <role>employee</role>
+        <nome>Clark Kent</nome>
+        <email>clark@example.com</email>
+        <senha>123456</senha>
+        <birthday>1989-09-05</birthday>
+        <cpf>96336985233</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Vendas</department>
+    </user>
+    <user>
+        <id>5</id>
+        <role>employee</role>
+        <nome>Diana Prince</nome>
+        <email>diana@example.com</email>
+        <senha>123456</senha>
+        <birthday>1990-12-20</birthday>
+        <cpf>45685232147</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Vendas</department>
+    </user>
+    <user>
+        <id>6</id>
+        <role>employee</role>
+        <nome>Barry Allen</nome>
+        <email>barry@example.com</email>
+        <senha>123456</senha>
+        <birthday>1985-09-30</birthday>
+        <cpf>74125855547</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Cozinha</department>
+    </user>
+    <user>
+        <id>7</id>
+        <role>employee</role>
+        <nome>Slade Wilson</nome>
+        <email>sladewilson@example.com</email>
+        <senha>123456</senha>
+        <birthday>1995-04-20</birthday>
+        <cpf>78912333369</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Cozinha</department>
+    </user>
+    <user>
+        <id>8</id>
+        <role>employee</role>
+        <nome>Lex Luthor</nome>
+        <email>lex@luthorcorp.org</email>
+        <senha>123456</senha>
+        <birthday>1986-01-04</birthday>
+        <cpf>12378944455</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Cozinha</department>
+    </user>
+    <user>
+        <id>9</id>
+        <role>employee</role>
+        <nome>Harleen Quinzel</nome>
+        <email>harleyquinn@example.com</email>
+        <senha>123456</senha>
+        <birthday>1991-05-05</birthday>
+        <cpf>42336874599</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Serviços Gerais</department>
+    </user>
+    <user>
+        <id>10</id>
+        <role>employee</role>
+        <nome>Kara Danvers</nome>
+        <email>karadanvers@example.com</email>
+        <senha>123456</senha>
+        <birthday>1990-12-12</birthday>
+        <cpf>95175336999</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Serviços Gerais</department>
+    </user>
+    <user>
+        <id>11</id>
+        <role>employee</role>
+        <nome>Oliver Queen</nome>
+        <email>oliver@queen.org</email>
+        <senha>123456</senha>
+        <birthday>1989-11-02</birthday>
+        <cpf>88857412333</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Financeiro</department>
+    </user>
+    <user>
+        <id>12</id>
+        <role>employee</role>
+        <nome>Laurel Lance</nome>
+        <email>laurel@example.com</email>
+        <senha>123456</senha>
+        <birthday>1987-11-10</birthday>
+        <cpf>55882211126</cpf>
+        <created__at>2017-06-11</created__at>
+        <department>Recursos Humanos</department>
+    </user>
+    <user>
+        <id>13</id>
+        <role>client</role>
+        <nome>Frank Castle</nome>
+        <email>frank@example.com</email>
+        <senha>123456</senha>
+        <birthday>1986-05-12</birthday>
+        <cpf>0326987412</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>14</id>
+        <role>client</role>
+        <nome>Matt Murdock dos Santos</nome>
+        <email>matt@example.com</email>
+        <senha>123456</senha>
+        <birthday>1990-05-05</birthday>
+        <cpf>05487456988</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>15</id>
+        <role>client</role>
+        <nome>Jessica Jones</nome>
+        <email>jessica@example.com.br</email>
+        <senha>123456</senha>
+        <birthday>1980-01-10</birthday>
+        <cpf>1284887452</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>16</id>
+        <role>client</role>
+        <nome>Elektra Natchios</nome>
+        <email>elektra@example.com</email>
+        <senha>123456</senha>
+        <birthday>1970-09-30</birthday>
+        <cpf>0549874563</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>17</id>
+        <role>client</role>
+        <nome>Danny Rand</nome>
+        <email>danny@example.com</email>
+        <senha>123456</senha>
+        <birthday>1995-04-20</birthday>
+        <cpf>03245698777</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>18</id>
+        <role>client</role>
+        <nome>Wilson Fisk</nome>
+        <email>wilson@example.com</email>
+        <senha>123456</senha>
+        <birthday>1986-05-28</birthday>
+        <cpf>12398745633</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>19</id>
+        <role>client</role>
+        <nome>Luke Cage</nome>
+        <email>luke@example.com</email>
+        <senha>123456</senha>
+        <birthday>1979-05-05</birthday>
+        <cpf>06345698744</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>20</id>
+        <role>client</role>
+        <nome>Claire Temple</nome>
+        <email>claire@example.com</email>
+        <senha>123456</senha>
+        <birthday>1990-02-13</birthday>
+        <cpf>12365587444</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>21</id>
+        <role>client</role>
+        <nome>Foggy Nelson</nome>
+        <email>foggy@example.com</email>
+        <senha>123456</senha>
+        <birthday>1989-09-12</birthday>
+        <cpf>15975336999</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>22</id>
+        <role>client</role>
+        <nome>Karen Page</nome>
+        <email>karen@example.com</email>
+        <senha>123456</senha>
+        <birthday>1988-04-11</birthday>
+        <cpf>75395178955</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+    <user>
+        <id>23</id>
+        <role>client</role>
+        <nome>Steve Rogers</nome>
+        <email>steve@example.com</email>
+        <senha>123456</senha>
+        <birthday>1920-07-04</birthday>
+        <cpf>75395178955</cpf>
+        <created__at>2017-06-10</created__at>
+        <department>client</department>
+    </user>
+</users>
