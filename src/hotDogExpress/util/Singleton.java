@@ -113,7 +113,7 @@ public class Singleton{
 
     public void saveClients(List<User> users) throws FileNotFoundException {
         XStream stream = getXStream();
-        stream.alias("client", User.class);
+        stream.alias("user", User.class);
         stream.toXML(users, new FileOutputStream("xml/users.xml"));
     }
 }

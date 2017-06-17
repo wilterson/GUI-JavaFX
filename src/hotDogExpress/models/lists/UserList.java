@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import hotDogExpress.models.User;
 import java.util.List;
 
-@XStreamAlias("users")
+@XStreamAlias("list")
 public class UserList {
 
     @XStreamImplicit(itemFieldName = "user")

@@ -1,4 +1,5 @@
-<users>
+<?xml version="1.0" ?>
+<list>
     <user>
         <id>1</id>
         <role>admin</role>
@@ -145,7 +146,7 @@
     <user>
         <id>14</id>
         <role>client</role>
-        <nome>Matt Murdock dos Santos</nome>
+        <nome>Matt Murdock</nome>
         <email>matt@example.com</email>
         <senha>123456</senha>
         <birthday>1990-05-05</birthday>
@@ -157,7 +158,7 @@
         <id>15</id>
         <role>client</role>
         <nome>Jessica Jones</nome>
-        <email>jessica@example.com.br</email>
+        <email>jessica@example.com</email>
         <senha>123456</senha>
         <birthday>1980-01-10</birthday>
         <cpf>1284887452</cpf>
@@ -252,4 +253,4 @@
         <created__at>2017-06-10</created__at>
         <department>client</department>
     </user>
-</users>
+</list>
