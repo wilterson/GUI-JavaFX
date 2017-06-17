@@ -13,10 +13,12 @@ import hotDogExpress.models.lists.UserList;
 import hotDogExpress.models.Sell;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -33,7 +35,7 @@ public class Singleton{
 
     private Singleton() throws FileNotFoundException {
 
-        XStream stream = new XStream(new StaxDriver());
+        XStream stream = getXStream();
 
         stream.processAnnotations(UserList.class);
         stream.processAnnotations(ProductList.class);
@@ -50,6 +52,10 @@ public class Singleton{
         userActive = new User(0,null, null, null, null, null, null, null, null);
     }
 
+    private XStream getXStream() {
+        return new XStream(new StaxDriver());
+    }
+
     public static Singleton getInstance() throws FileNotFoundException {
         if(Instance == null)
             Instance = new Singleton();
@@ -61,8 +67,8 @@ public class Singleton{
         return users.getUsers();
     }
 
-    public void setUsers(UserList users) {
-        this.users = users;
+    public void setUsers(List<User> users) {
+        this.users.setUsers(users);
     }
 
     public User getUserActive() {
@@ -103,6 +109,11 @@ public class Singleton{
         }
 
         return employees;
+    }
+
+    public void saveClients(List<User> users) throws FileNotFoundException {
+        XStream stream = getXStream();
+        stream.toXML(users, new FileOutputStream("xml/users.xml"));
     }
 }
 

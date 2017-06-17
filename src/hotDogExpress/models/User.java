@@ -5,21 +5,25 @@
 package hotDogExpress.models;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class User {
 
-    private final int id;
-    private final String role;
-    private final String nome;
-    private final String email;
-    private final String senha;
-    private final Date birthday;
-    private final String cpf;
-    private final Date created_at;
-    private final String department;
+    private int id;
+    private String role;
+    private String nome;
+    private String email;
+    private String senha;
+    private LocalDate birthday;
+    private String cpf;
+    private LocalDate created_at;
+    private String department;
 
-    public User(int id, String role, String nome, String email, String senha, Date birthday, String cpf, Date created_at, String department) {
+    public User(int id, String role, String nome, String email,
+                String senha, LocalDate birthday, String cpf,
+                LocalDate created_at, String department
+    ){
         this.id = id;
         this.role = role;
         this.nome = nome;
@@ -35,36 +39,71 @@ public class User {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getRole() {
         return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getNome() {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {
         return senha;
     }
 
-    public Date getBirthday() {
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public LocalDate getBirthday() {
         return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public String getCpf() {
         return cpf;
     }
 
-    public Date getCreated_at() {
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public LocalDate getCreated_at() {
         return created_at;
+    }
+
+    public void setCreated_at(LocalDate created_at) {
+        this.created_at = created_at;
     }
 
     public String getDepartment() {
         return department;
     }
 
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }

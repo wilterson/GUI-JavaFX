@@ -131,8 +131,48 @@ public class EmployeeController implements Initializable{
     }
 
     @FXML
-    void editClient(ActionEvent event) {
-
+    void editEmployee(ActionEvent event) {
+//        UserObservable user = tableViewClients.getSelectionModel().getSelectedItem();
+//        if (user != null) {
+//            boolean okClicked = mainApp.editClient(user);
+//            if (okClicked) {
+//                (v);
+//
+//                // Grava no XML
+//                // Atualiza o modelo
+//                List<Veiculo> veiculos = mainApp.getEmpresa().getVeiculos();
+//                for (int i = 0; i < veiculos.size(); i++) {
+//                    Veiculo temp = veiculos.get(i);
+//                    if (temp.getCod() == v.getCod()) {
+//                        temp.setAnoFabricacao(v.getAnoFabricacao());
+//                        temp.setCodFabricante(v.getCodFabricante());
+//                        temp.setCor(v.getCor());
+//                        temp.setLocado(v.getLocado());
+//                        temp.setModelo(v.getModelo());
+//                        temp.setValorDiaria(v.getValorDiaria());
+//                        veiculos.set(i, temp);
+//                        break;
+//                    }
+//                }
+//
+//                mainApp.getEmpresa().setVeiculos(veiculos);
+//
+//                XStream stream = new XStream(new DomDriver());
+//                try {
+//                    stream.toXML(veiculos, new FileOutputStream("xml/veiculos.xml"));
+//                } catch (FileNotFoundException ex) {
+//                    Logger.getLogger(ManterVeiculosController.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//
+//        } else {
+//            // Nada seleciondo.
+//            Alert alert = new Alert(Alert.AlertType.WARNING);
+//            alert.setTitle("Nenhuma seleção");
+//            alert.setHeaderText("Nenhum veiculo selecionado");
+//            alert.setContentText("Por favor, selecione um veiculo na tabela.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML

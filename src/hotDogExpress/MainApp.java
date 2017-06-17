@@ -1,5 +1,6 @@
 package hotDogExpress;
 
+import hotDogExpress.models.UserObservable;
 import hotDogExpress.util.Singleton;
 import hotDogExpress.views.*;
 import javafx.application.Application;
@@ -186,5 +187,37 @@ public class MainApp extends Application implements Initializable{
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public boolean editClient(UserObservable user) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/EditClient.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Editar Cliente");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+
+            EditClientController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+            controller.setUser(user);
+
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+
     }
 }

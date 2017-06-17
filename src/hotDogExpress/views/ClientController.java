@@ -98,8 +98,6 @@ public class ClientController implements Initializable{
             lblNameClient.setText(user.getNome());
             lblEmailClient.setText(user.getEmail());
             lblCpfClient.setText(user.getCpf());
-//            lblBirthdayClient.setText(user.getBirthday());
-//            lblCreatedAtClient.setText(user.getCreatedAt());
         } else {
             lblCodClient.setText("");
             lblNameClient.setText("");
@@ -114,8 +112,49 @@ public class ClientController implements Initializable{
     }
 
     @FXML
-    void editClient(ActionEvent event) {
+    void editClient(ActionEvent event) throws FileNotFoundException {
+        UserObservable user = tableViewClients.getSelectionModel().getSelectedItem();
+        if (user != null) {
+            boolean okClicked = mainApp.editClient(user);
+            if (okClicked) {
+                showClientDetails(user);
 
+                // Grava no XML
+                // Atualiza o modelo
+                List<User> users = app.getUsers();
+                for (int i = 0; i < users.size(); i++) {
+                    User userTemp = users.get(i);
+
+                    if (userTemp.getId() == user.getId()) {
+                        userTemp.setRole(user.getRole());
+                        userTemp.setNome(user.getNome());
+                        userTemp.setEmail(user.getEmail());
+                        userTemp.setBirthday(user.getBirthday());
+                        userTemp.setCpf(user.getCpf());
+                        userTemp.setCreated_at(user.getCreated_at());
+
+                        users.set(i, userTemp);
+                        break;
+                    }
+                }
+
+                app.setUsers(users);
+
+                try {
+                    app.saveClients(users);
+                }catch(FileNotFoundException e){
+                    System.out.println("Erro ao salvar clientes: " + e);
+                }
+            }
+
+        } else {
+            // Nada seleciondo.
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Nenhuma seleção");
+            alert.setHeaderText("Nenhum veiculo selecionado");
+            alert.setContentText("Por favor, selecione um veiculo na tabela.");
+            alert.showAndWait();
+        }
     }
 
     @FXML

@@ -4,11 +4,9 @@
 
 package hotDogExpress.models;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class UserObservable {
@@ -18,24 +16,24 @@ public class UserObservable {
     private final StringProperty nome;
     private final StringProperty email;
     private final StringProperty senha;
-//    private final Date birthday;
+    private final ObjectProperty<LocalDate> birthday;
     private final StringProperty cpf;
-//    private final Date created_at;
+    private final ObjectProperty<LocalDate> created_at;
     private final StringProperty department;
 
 
-    public UserObservable(IntegerProperty id, StringProperty role,
-                          StringProperty nome, StringProperty email,
-                          StringProperty senha, StringProperty cpf, StringProperty department
-    ){
+    public UserObservable(IntegerProperty id, StringProperty role, StringProperty nome,
+                          StringProperty email, StringProperty senha, ObjectProperty<LocalDate> birthday,
+                          StringProperty cpf, ObjectProperty<LocalDate> created_at, StringProperty department
+    ) {
         this.id = id;
         this.role = role;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.birthday = birthday;
         this.cpf = cpf;
-//        this.birthday = birthday;
-//        this.created_at = created_at;
+        this.created_at = created_at;
         this.department = department;
     }
 
@@ -47,8 +45,8 @@ public class UserObservable {
         this.senha = new SimpleStringProperty(user.getSenha());
         this.cpf = new SimpleStringProperty(user.getCpf());
         this.department = new SimpleStringProperty(user.getDepartment());
-//        this.cpf = new SimpleStringProperty(user.getBirthday());
-//        this.cpf = new SimpleStringProperty();
+        this.birthday= new SimpleObjectProperty<LocalDate>(user.getBirthday());
+        this.created_at = new SimpleObjectProperty<LocalDate>(user.getCreated_at());
     }
 
     public int getId() {
@@ -111,6 +109,18 @@ public class UserObservable {
         this.senha.set(senha);
     }
 
+    public LocalDate getBirthday() {
+        return birthday.get();
+    }
+
+    public ObjectProperty<LocalDate> birthdayProperty() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday.set(birthday);
+    }
+
     public String getCpf() {
         return cpf.get();
     }
@@ -121,6 +131,18 @@ public class UserObservable {
 
     public void setCpf(String cpf) {
         this.cpf.set(cpf);
+    }
+
+    public LocalDate getCreated_at() {
+        return created_at.get();
+    }
+
+    public ObjectProperty<LocalDate> created_atProperty() {
+        return created_at;
+    }
+
+    public void setCreated_at(LocalDate created_at) {
+        this.created_at.set(created_at);
     }
 
     public String getDepartment() {
