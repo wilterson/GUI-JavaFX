@@ -6,7 +6,6 @@ import hotDogExpress.views.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -182,7 +181,7 @@ public class MainApp extends Application implements Initializable{
             BorderPane mainWindow = (BorderPane) loader.load();
             rootLayout.setCenter(mainWindow);
 
-            EmployeeController controller = loader.getController();
+            EmployeesController controller = loader.getController();
             controller.setMainApp(this);
         }catch (IOException e){
             e.printStackTrace();
@@ -219,5 +218,36 @@ public class MainApp extends Application implements Initializable{
 
         return false;
 
+    }
+
+    public boolean editEmployee(UserObservable user) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/EditEmployee.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Editar Funcionário");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+
+            EditEmployeeController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+            controller.setUser(user);
+
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 }

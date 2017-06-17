@@ -54,7 +54,6 @@ public class User {
         this.senha = "";
         this.birthday = null;
         this.cpf = "";
-        this.created_at = null;
         this.department = "";
     }
 

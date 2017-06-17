@@ -17,7 +17,7 @@
          </image>
       </ImageView>
       <Text layoutX="38.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edite as informações e clique em salvar." />
-      <JFXTextField fx:id="inputEmail" focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="288.0" prefHeight="29.0" prefWidth="356.0" promptText="E-mail" unFocusColor="#d9d9d9" />
+      <JFXTextField fx:id="inputEmail" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="288.0" prefHeight="29.0" prefWidth="356.0" promptText="E-mail" unFocusColor="#7c7c7c" />
       <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="491.0" onAction="#handleSaveClient" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #009688;" text="Salvar" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -28,8 +28,8 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="inputName" focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="228.0" prefHeight="29.0" prefWidth="356.0" promptText="Nome Completo" unFocusColor="#d9d9d9" />
-      <JFXPasswordField fx:id="inputPassword" focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="349.0" prefHeight="29.0" prefWidth="356.0" promptText="Senha" unFocusColor="#d9d9d9" />
-      <JFXTextField fx:id="inputCpf" focusColor="WHITE" labelFloat="true" layoutX="21.0" layoutY="413.0" prefHeight="29.0" prefWidth="356.0" promptText="CPF" unFocusColor="#d9d9d9" />
+      <JFXTextField fx:id="inputName" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="228.0" prefHeight="29.0" prefWidth="356.0" promptText="Nome Completo" unFocusColor="#757575" />
+      <JFXPasswordField fx:id="inputPassword" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="349.0" prefHeight="29.0" prefWidth="356.0" promptText="Senha" unFocusColor="#7c7c7c" />
+      <JFXTextField fx:id="inputCpf" focusColor="#009688" labelFloat="true" layoutX="21.0" layoutY="413.0" prefHeight="29.0" prefWidth="356.0" promptText="CPF" unFocusColor="#7c7c7c" />
    </children>
 </AnchorPane>

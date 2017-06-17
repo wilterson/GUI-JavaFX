@@ -22,31 +22,19 @@ public class UserObservable {
     private final StringProperty department;
 
 
-    public UserObservable(IntegerProperty id, StringProperty role, StringProperty nome,
-                          StringProperty email, StringProperty senha, ObjectProperty<LocalDate> birthday,
-                          StringProperty cpf, ObjectProperty<LocalDate> created_at, StringProperty department
-    ) {
-        this.id = id;
-        this.role = role;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.birthday = birthday;
-        this.cpf = cpf;
-        this.created_at = created_at;
-        this.department = department;
-    }
-
-//    public UserObservable(User user){
-//        this.id = new SimpleIntegerProperty(user.getId());
-//        this.role = new SimpleStringProperty(user.getRole());
-//        this.nome = new SimpleStringProperty(user.getNome());
-//        this.email = new SimpleStringProperty(user.getEmail());
-//        this.senha = new SimpleStringProperty(user.getSenha());
-//        this.cpf = new SimpleStringProperty(user.getCpf());
-//        this.department = new SimpleStringProperty(user.getDepartment());
-//        this.birthday= new SimpleObjectProperty<LocalDate>(user.getBirthday());
-//        this.created_at = new SimpleObjectProperty<LocalDate>(user.getCreated_at());
+//    public UserObservable(IntegerProperty id, StringProperty role, StringProperty nome,
+//                          StringProperty email, StringProperty senha, ObjectProperty<LocalDate> birthday,
+//                          StringProperty cpf, ObjectProperty<LocalDate> created_at, StringProperty department
+//    ) {
+//        this.id = id;
+//        this.role = role;
+//        this.nome = nome;
+//        this.email = email;
+//        this.senha = senha;
+//        this.birthday = birthday;
+//        this.cpf = cpf;
+//        this.created_at = created_at;
+//        this.department = department;
 //    }
 
     public UserObservable(User user){

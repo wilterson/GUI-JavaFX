@@ -5,11 +5,10 @@
 package hotDogExpress.views;
 
 import com.jfoenix.controls.JFXButton;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 import hotDogExpress.MainApp;
 import hotDogExpress.models.UserObservable;
 import hotDogExpress.models.User;
+import hotDogExpress.util.DateUtil;
 import hotDogExpress.util.Singleton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,13 +18,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ClientController implements Initializable{
     private MainApp mainApp;
@@ -104,6 +100,8 @@ public class ClientController implements Initializable{
             lblNameClient.setText(user.getNome());
             lblEmailClient.setText(user.getEmail());
             lblCpfClient.setText(user.getCpf());
+            lblBirthdayClient.setText(DateUtil.format(user.getBirthday()));
+            lblCreatedAtClient.setText(DateUtil.format(user.getCreated_at()));
         } else {
             lblCodClient.setText("");
             lblNameClient.setText("");
@@ -120,8 +118,6 @@ public class ClientController implements Initializable{
             if (okClicked) {
                 showClientDetails(user);
 
-                // Grava no XML
-                // Atualiza o modelo
                 List<User> users = app.getUsers();
                 for (int i = 0; i < users.size(); i++) {
                     User userTemp = users.get(i);
@@ -149,11 +145,10 @@ public class ClientController implements Initializable{
             }
 
         } else {
-            // Nada seleciondo.
             Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Nenhuma seleção");
-            alert.setHeaderText("Nenhum veiculo selecionado");
-            alert.setContentText("Por favor, selecione um veiculo na tabela.");
+            alert.setTitle("Erro");
+            alert.setHeaderText("Nada Selecionado");
+            alert.setContentText("Selecione um cliente para editar.");
             alert.showAndWait();
         }
     }
@@ -175,7 +170,8 @@ public class ClientController implements Initializable{
                 for (int i = 0; i < users.size(); i++) {
                     User userTemp = users.get(i);
                     if (userTemp.getId() == user.getId()) {
-                        users.remove(selectedIndex);
+                        int userIndex = users.indexOf(userTemp);
+                        users.remove(userIndex);
                         break;
                     }
                 }

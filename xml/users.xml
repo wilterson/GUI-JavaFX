@@ -12,50 +12,6 @@
         <department>Diretoria</department>
     </user>
     <user>
-        <id>3</id>
-        <role>employee</role>
-        <nome>Bruce Wayne</nome>
-        <email>bruce@example.com</email>
-        <senha>123456</senha>
-        <birthday>1956-06-13</birthday>
-        <cpf>45678996312</cpf>
-        <created__at>2017-06-11</created__at>
-        <department>Vendas</department>
-    </user>
-    <user>
-        <id>4</id>
-        <role>employee</role>
-        <nome>Clark Kent</nome>
-        <email>clark@example.com</email>
-        <senha>123456</senha>
-        <birthday>1989-09-05</birthday>
-        <cpf>96336985233</cpf>
-        <created__at>2017-06-11</created__at>
-        <department>Vendas</department>
-    </user>
-    <user>
-        <id>5</id>
-        <role>employee</role>
-        <nome>Diana Prince</nome>
-        <email>diana@example.com</email>
-        <senha>123456</senha>
-        <birthday>1990-12-20</birthday>
-        <cpf>45685232147</cpf>
-        <created__at>2017-06-11</created__at>
-        <department>Vendas</department>
-    </user>
-    <user>
-        <id>6</id>
-        <role>employee</role>
-        <nome>Barry Allen</nome>
-        <email>barry@example.com</email>
-        <senha>123456</senha>
-        <birthday>1985-09-30</birthday>
-        <cpf>74125855547</cpf>
-        <created__at>2017-06-11</created__at>
-        <department>Cozinha</department>
-    </user>
-    <user>
         <id>7</id>
         <role>employee</role>
         <nome>Slade Wilson</nome>
@@ -120,28 +76,6 @@
         <cpf>55882211126</cpf>
         <created__at>2017-06-11</created__at>
         <department>Recursos Humanos</department>
-    </user>
-    <user>
-        <id>13</id>
-        <role>client</role>
-        <nome>Frank Castle</nome>
-        <email>frank@example.com</email>
-        <senha>123456</senha>
-        <birthday>1986-05-12</birthday>
-        <cpf>0326987412</cpf>
-        <created__at>2017-06-10</created__at>
-        <department>client</department>
-    </user>
-    <user>
-        <id>14</id>
-        <role>client</role>
-        <nome>Matt Murdock</nome>
-        <email>matt@example.com</email>
-        <senha>123456</senha>
-        <birthday>1990-05-05</birthday>
-        <cpf>05487456988</cpf>
-        <created__at>2017-06-10</created__at>
-        <department>client</department>
     </user>
     <user>
         <id>15</id>
@@ -241,5 +175,14 @@
         <cpf>75395178955</cpf>
         <created__at>2017-06-10</created__at>
         <department>client</department>
+    </user>
+    <user>
+        <id>24</id>
+        <role>employee</role>
+        <nome>Jonny</nome>
+        <email>jhonny@example.com</email>
+        <senha>123456</senha>
+        <cpf>05430939994</cpf>
+        <department>Financeiro</department>
     </user>
 </list>

@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -34,6 +35,7 @@ public class Singleton{
     private ProductList products;
     private User userActive = new User(0,null, null, null, null, null, null, null, null);;
     private List<User> usersClients;
+    private LocalDate dateToday;
 
     private Singleton() throws FileNotFoundException {
 
