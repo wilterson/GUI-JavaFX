@@ -6,7 +6,6 @@ package hotDogExpress.models;
 
 public enum ProductType {
 
-    food,
-    drink
+    food, drink, undefined
 
 }

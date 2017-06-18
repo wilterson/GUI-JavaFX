@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.ManageStorageController">
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="368.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.5" prefHeight="450.0" prefWidth="800.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="448.0" prefWidth="395.0">
+                     <children>
+                        <TableView fx:id="tableViewStorage" layoutX="38.0" layoutY="71.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="itemNameColumn" prefWidth="283.0" text="Nome" />
+                              <TableColumn fx:id="itemStatusColumn" prefWidth="104.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="306.0">
+                     <children>
+                        <GridPane layoutX="-2.0" layoutY="74.0" prefHeight="238.0" prefWidth="397.0" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="168.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Código">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Preço" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Quantidade" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblCodItem" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="lblPriceItem" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lblQtdItem" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Nome" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblNameItem" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Status do Item" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblStatusItem" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Text layoutX="44.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detalhes do Item">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <JFXButton fx:id="btnRequest" alignment="CENTER" contentDisplay="CENTER" onAction="#handleRequest" prefHeight="31.0" prefWidth="439.0" style="-fx-background-color: #009688;" text="Solicitar Aquisição" textFill="WHITE" />
+                  <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" onAction="#backHome" prefHeight="31.0" prefWidth="137.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE" />
+               </buttons>
+               <padding>
+                  <Insets right="25.0" top="15.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

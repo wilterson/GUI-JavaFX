@@ -103,7 +103,12 @@ public class HomeController implements Initializable{
 
     @FXML
     void showStorage(ActionEvent event) {
+        mainApp.initManageStorage("client");
+    }
 
+    @FXML
+    void showManageStorage(ActionEvent event) {
+        mainApp.initManageStorage("admin");
     }
 
     @FXML
@@ -112,8 +117,8 @@ public class HomeController implements Initializable{
     }
 
     @FXML
-    void showAddItem(ActionEvent event) {
-
+    void showCardapio(ActionEvent event) {
+        mainApp.initManageCardapio();
     }
 
     @FXML

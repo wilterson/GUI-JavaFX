@@ -123,13 +123,8 @@ public class LoginController implements Initializable{
     }
 
     @FXML
-    void showForgotPassword(ActionEvent event) {
-        System.out.println("ForgotPass");
-    }
-
-    @FXML
     void showSignup(ActionEvent event) {
-        System.out.println("Signup");
+        mainApp.initSignup();
     }
 
     private void setUserActive(User userActive) {

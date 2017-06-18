@@ -1,9 +1,8 @@
 package hotDogExpress.views;
 
 import com.jfoenix.controls.JFXButton;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 import hotDogExpress.MainApp;
+import hotDogExpress.models.Product;
 import hotDogExpress.models.User;
 import hotDogExpress.models.UserObservable;
 import hotDogExpress.util.DateUtil;
@@ -16,14 +15,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class EmployeesController implements Initializable{
 
@@ -87,8 +83,8 @@ public class EmployeesController implements Initializable{
             }
 
             tableViewEmployees.setItems(listUserEmployee);
-
             initTableEmployees();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -188,7 +184,7 @@ public class EmployeesController implements Initializable{
             users.add(userTemp);
 
             app.setUsers(users);
-//            insertUser();
+            insertUser();
 
             app.saveUsers(users);
         }
@@ -197,10 +193,9 @@ public class EmployeesController implements Initializable{
     private void insertUser() {
         listUserEmployee.clear();
 
-        List<User> list = app.getUsers();
-        for (int i = 0; i < list.size(); i++) {
-            User user = list.get(i);
-            list.add(new User(user));
+        List<User> list = app.getUsersEmployees();
+        for (User user : list) {
+            listUserEmployee.add(new UserObservable(user));
         }
 
         tableViewEmployees.setItems(listUserEmployee);

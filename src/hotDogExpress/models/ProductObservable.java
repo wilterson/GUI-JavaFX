@@ -27,6 +27,13 @@ public class ProductObservable {
         this.name = new SimpleStringProperty(prod.getName());
     }
 
+    public ProductObservable() {
+        this.productCod = new SimpleIntegerProperty();
+        this.type = ProductType.undefined;
+        this.price = new SimpleDoubleProperty();
+        this.name = new SimpleStringProperty();
+    }
+
     public int getProductCod() {
         return productCod.get();
     }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="672.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.EditStorageItemController">
+   <children>
+      <ImageView fitHeight="103.0" fitWidth="200.0" layoutX="113.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="66.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insira as informações do item e clique em solicitar Aquisição" textAlignment="CENTER" wrappingWidth="266.55859375" />
+      <JFXTextField fx:id="inputPrice" focusColor="#009688" labelFloat="true" layoutX="21.0" layoutY="388.0" prefHeight="29.0" prefWidth="356.0" promptText="Valor da Compra" unFocusColor="#7c7c7c" />
+      <JFXButton fx:id="btnRequest" buttonType="RAISED" layoutX="23.0" layoutY="522.0" onAction="#handleRequest" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #009688;" text="Solicitar Aquisiçao" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="22.0" layoutY="577.0" onAction="#handleBack" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="inputName" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="255.0" prefHeight="29.0" prefWidth="356.0" promptText="Nome do Item" unFocusColor="#757575" />
+      <JFXTextField fx:id="inputQtd" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="325.0" prefHeight="29.0" prefWidth="356.0" promptText="Quantidade" unFocusColor="#757575" />
+   </children>
+</AnchorPane>

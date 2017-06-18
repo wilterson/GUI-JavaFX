@@ -1,5 +1,7 @@
 package hotDogExpress;
 
+import hotDogExpress.models.ProductObservable;
+import hotDogExpress.models.StorageObservable;
 import hotDogExpress.models.UserObservable;
 import hotDogExpress.util.Singleton;
 import hotDogExpress.views.*;
@@ -239,6 +241,133 @@ public class MainApp extends Application implements Initializable{
             controller.setDialogStage(dialogStage);
             controller.setMainApp(this);
             controller.setUser(user);
+
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public void initSignup() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Signup.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Registrar");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+
+            SignupController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initManageCardapio() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/ManageCardapio.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            ManageCardapioController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean editProduct(ProductObservable product) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/EditCardapioItem.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Inserir Novo Produto");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+
+            EditCardapioItemController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+            controller.setProduct(product);
+
+            // Mostra a janela e espera até o usuário fechar.
+            dialogStage.showAndWait();
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public void initManageStorage(String type) {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            if(type.equals("client")){
+                loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/ManageStorage.fxml"));
+            }else{
+                loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/ManageStorageAdmin.fxml"));
+            }
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            ManageStorageController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean editStorageItem(StorageObservable storageItem) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/EditStorageItem.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Inserir Novo Produto");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+
+            EditStorageItemController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+            controller.setItem(storageItem);
 
             // Mostra a janela e espera até o usuário fechar.
             dialogStage.showAndWait();

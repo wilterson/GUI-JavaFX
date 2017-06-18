@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotDogExpress.views.ManageCardapioController">
+    <center>
+        <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Text layoutX="149.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hot Dogs" AnchorPane.topAnchor="20.259765625">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Text>
+                        <TableView fx:id="foodTable" layoutX="109.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                            <columns>
+                                <TableColumn fx:id="foodCodColumn" prefWidth="75.0" text="Cod" />
+                                <TableColumn fx:id="foodNameColumn" prefWidth="217.0" text="Item" />
+                                <TableColumn fx:id="foodPriceColumn" prefWidth="99.0" text="Valor" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Text layoutX="161.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bebidas" AnchorPane.topAnchor="21.41796875">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                        <TableView fx:id="drinkTable" layoutX="7.0" layoutY="48.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                            <columns>
+                                <TableColumn fx:id="drinkCodColumn" prefWidth="75.0" text="Cod" />
+                                <TableColumn fx:id="drinkNameColumn" prefWidth="213.0" text="Item" />
+                                <TableColumn fx:id="drinkPriceColumn" prefWidth="102.0" text="Valor" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <BorderPane prefHeight="135.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox prefHeight="101.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="800.0" spacing="25.0">
+                     <children>
+                              <JFXButton fx:id="btnAddNew" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleAddNewItem" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #009688;" text="Add Item" textFill="WHITE">
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                        <JFXButton fx:id="btnRemoveItem" buttonType="RAISED" onAction="#handleRemoveItem" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #009688;" text="Deletar Item" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="800.0">
+                     <children>
+                              <JFXButton fx:id="btnBack" alignment="CENTER" buttonType="RAISED" onAction="#backToHome" prefHeight="31.0" prefWidth="469.0" style="-fx-background-color: #009688;" text="Voltar" textFill="WHITE">
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+        </BorderPane>
+    </bottom>
+</BorderPane>

@@ -38,7 +38,8 @@ public class CardapioController implements Initializable{
 
     private List<Product> products;
 
-    private ObservableList<Product> productsObservableList;
+    private ObservableList<Product> foodsObservableList;
+    private ObservableList<Product> drinksObservableList;
 
     @FXML
     private TableView<Product> foodTable;
@@ -75,15 +76,6 @@ public class CardapioController implements Initializable{
         try {
             this.app = Singleton.getInstance();
             carregarTableViewCardapio();
-//            foodCodColumn.setCellValueFactory(cellData -> cellData.getValue().productCodProperty());
-//            foodNameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-//            foodPriceColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-
-//            mostraDetalhes(null);
-
-//            veiculoTable.getSelectionModel().selectedItemProperty().addListener(
-//                    (observable, oldValue, newValue) -> mostraDetalhes(newValue));
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
 
@@ -114,9 +106,17 @@ public class CardapioController implements Initializable{
         foodNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         foodPriceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        List<Product> listProducts = app.getProducts();
+        drinkCodColumn.setCellValueFactory(new PropertyValueFactory<>("productCod"));
+        drinkNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        drinkPriceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        productsObservableList = FXCollections.observableArrayList(listProducts);
-        foodTable.setItems(productsObservableList);
+        List<Product> listFoods = app.getProductsFood();
+        List<Product> listDrinks = app.getProductsDrink();
+
+        foodsObservableList = FXCollections.observableArrayList(listFoods);
+        drinksObservableList = FXCollections.observableArrayList(listDrinks);
+
+        foodTable.setItems(foodsObservableList);
+        drinkTable.setItems(drinksObservableList);
     }
 }

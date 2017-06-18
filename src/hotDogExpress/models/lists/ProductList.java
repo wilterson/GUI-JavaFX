@@ -7,7 +7,6 @@ package hotDogExpress.models.lists;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import hotDogExpress.models.Product;
-import hotDogExpress.models.User;
 import java.util.List;
 
 @XStreamAlias("products")

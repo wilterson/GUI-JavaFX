@@ -1,99 +1,129 @@
+<?xml version="1.0" ?>
 <products>
-    <product>
-        <productCod>1</productCod>
-        <type>food</type>
-        <name>Hot Dog Simples</name>
-        <price>4.50</price>
-    </product>
-
     <product>
         <productCod>2</productCod>
         <type>food</type>
+        <price>6.9</price>
         <name>Hot Dog Duplo</name>
-        <price>6.90</price>
     </product>
-
     <product>
         <productCod>3</productCod>
         <type>food</type>
+        <price>8.9</price>
         <name>Hot Dog Duplo com Cheddar</name>
-        <price>8.90</price>
     </product>
-
     <product>
         <productCod>4</productCod>
         <type>food</type>
+        <price>12.0</price>
         <name>Hot Dog Plus</name>
-        <price>12</price>
     </product>
-
     <product>
         <productCod>5</productCod>
         <type>food</type>
+        <price>14.9</price>
         <name>Hot Dog Plus com Cheddar</name>
-        <price>14.90</price>
     </product>
-
     <product>
         <productCod>6</productCod>
         <type>food</type>
+        <price>19.9</price>
         <name>Hot Dog Master</name>
-        <price>19.90</price>
     </product>
-
     <product>
         <productCod>7</productCod>
         <type>food</type>
+        <price>22.9</price>
         <name>Hot Dog Master Premium</name>
-        <price>22.90</price>
     </product>
-
     <product>
         <productCod>8</productCod>
         <type>food</type>
+        <price>25.0</price>
         <name>Hot Dog Master Premium Plus</name>
-        <price>25</price>
     </product>
-
-    <product>
-        <productCod>9</productCod>
-        <type>drink</type>
-        <name>Refrigerante Lata</name>
-        <price>4.5</price>
-    </product>
-
     <product>
         <productCod>10</productCod>
         <type>drink</type>
-        <name>Água sem Gás</name>
         <price>2.5</price>
+        <name>Água sem Gás</name>
     </product>
-
     <product>
         <productCod>11</productCod>
         <type>drink</type>
-        <name>Água com Gás</name>
         <price>3.5</price>
+        <name>Água com Gás</name>
     </product>
-
     <product>
         <productCod>12</productCod>
         <type>drink</type>
+        <price>5.0</price>
         <name>Suco Natural</name>
-        <price>5</price>
     </product>
-
     <product>
         <productCod>13</productCod>
         <type>drink</type>
-        <name>Refrigerante 1L</name>
         <price>6.99</price>
+        <name>Refrigerante 1L</name>
     </product>
-
     <product>
         <productCod>14</productCod>
         <type>drink</type>
-        <name>Refrigerante 2L</name>
         <price>8.99</price>
+        <name>Refrigerante 2L</name>
+    </product>
+    <product>
+        <productCod>15</productCod>
+        <type>food</type>
+        <price>10.5</price>
+        <name>Lasanha</name>
+    </product>
+    <product>
+        <productCod>16</productCod>
+        <type>undefined</type>
+        <price>5.0</price>
+        <name>Coca Cola</name>
+    </product>
+    <product>
+        <productCod>17</productCod>
+        <type>food</type>
+        <price>5.0</price>
+        <name>Rocambole</name>
+    </product>
+    <product>
+        <productCod>18</productCod>
+        <type>drink</type>
+        <price>12.0</price>
+        <name>Suco de Laranja</name>
+    </product>
+    <product>
+        <productCod>19</productCod>
+        <type>food</type>
+        <price>10.0</price>
+        <name>Comida</name>
+    </product>
+    <product>
+        <productCod>20</productCod>
+        <type>drink</type>
+        <price>5.0</price>
+        <name>Suco de Uva</name>
+    </product>
+    <product>
+        <productCod>21</productCod>
+        <type>drink</type>
+        <price>5.0</price>
+        <name>Suco de Maça</name>
+    </product>
+    <product>
+        <productCod>22</productCod>
+        <type>food</type>
+        <price>32.9</price>
+        <name>Pizza</name>
+    </product>
+    <product>
+        <productCod>23</productCod>
+        <type>drink</type>
+        <price>5.5</price>
+        <name>Refrigerante Lata</name>
     </product>
 </products>

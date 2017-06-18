@@ -21,6 +21,13 @@ public class Product {
         this.name = name;
     }
 
+    public Product() {
+        this.productCod = 0;
+        this.type = ProductType.undefined;
+        this.price = 0;
+        this.name = "";
+    }
+
     public int getProductCod() {
         return productCod;
     }
