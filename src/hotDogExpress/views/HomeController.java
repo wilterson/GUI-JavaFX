@@ -72,12 +72,12 @@ public class HomeController implements Initializable{
 
     @FXML
     void showBuy(ActionEvent event) {
-
+        mainApp.initClientBuy();
     }
 
     @FXML
     void showClientReport(ActionEvent event) {
-
+        mainApp.initClientReport();
     }
 
     @FXML
@@ -98,7 +98,7 @@ public class HomeController implements Initializable{
 
     @FXML
     void showSellsReport(ActionEvent event) {
-
+        mainApp.initSellsReport();
     }
 
     @FXML
@@ -113,7 +113,7 @@ public class HomeController implements Initializable{
 
     @FXML
     void showSystemLog(ActionEvent event) {
-
+        mainApp.initSystemLog();
     }
 
     @FXML

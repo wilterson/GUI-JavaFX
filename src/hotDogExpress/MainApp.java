@@ -1,28 +1,31 @@
+/**
+ * Created by Wilterson on 05/06/2017.
+ */
+
 package hotDogExpress;
 
-import hotDogExpress.models.ProductObservable;
-import hotDogExpress.models.StorageObservable;
-import hotDogExpress.models.UserObservable;
+import com.jfoenix.controls.JFXToggleButton;
+import hotDogExpress.models.*;
 import hotDogExpress.util.Singleton;
 import hotDogExpress.views.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import static javafx.application.Application.launch;
 
-/**
- * Created by Wilterson on 05/06/2017.
- */
 public class MainApp extends Application implements Initializable{
 
     private Stage window;
@@ -378,5 +381,105 @@ public class MainApp extends Application implements Initializable{
         }
 
         return false;
+    }
+
+    public void initClientBuy() {
+        try {
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/Buy.fxml"));
+            BorderPane page = (BorderPane) loader.load();
+
+            // Cria o palco dialogStage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Comprar");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(window);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            BuyController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setMainApp(this);
+
+            dialogStage.showAndWait();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean confirmCompra(List<Product> listProd, double totalGeral) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/ConfirmCompra.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+
+        // Cria o palco dialogStage.
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Lista de Compras");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(window);
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+
+        ConfirmCompraController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setMainApp(this);
+        controller.setItens(listProd, totalGeral);
+
+        dialogStage.showAndWait();
+
+        return controller.isOkClicked();
+    }
+
+    public void initClientReport() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/ClientReport.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            ClientReportController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void initSellsReport() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/SellsReport.fxml"));
+
+            BorderPane mainWindow = (BorderPane) loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            SellsReportController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void initSystemLog() {
+        try {
+            // Carrega o person overview.
+            FXMLLoader loader = new FXMLLoader();
+
+            loader.setLocation(MainApp.class.getResource("/hotDogExpress/views/SystemLog.fxml"));
+
+            AnchorPane mainWindow = loader.load();
+            rootLayout.setCenter(mainWindow);
+
+            SystemLogController controller = loader.getController();
+            controller.setMainApp(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

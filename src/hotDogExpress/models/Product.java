@@ -4,9 +4,12 @@
 
 package hotDogExpress.models;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@XStreamAlias("product")
 public class Product {
 
     private int productCod;
@@ -58,5 +61,10 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "productCod=" + productCod + ", type=" + type + ", price=" + price + ", name='" + name + '\'' + '}';
     }
 }

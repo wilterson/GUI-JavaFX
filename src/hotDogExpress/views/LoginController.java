@@ -6,6 +6,7 @@ package hotDogExpress.views;
 
 import com.jfoenix.controls.*;
 import hotDogExpress.MainApp;
+import hotDogExpress.models.SystemLog;
 import hotDogExpress.models.User;
 import hotDogExpress.util.Singleton;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -68,14 +70,20 @@ public class LoginController implements Initializable{
     }
 
     @FXML
-    public void login(ActionEvent actionEvent) {
+    public void login(ActionEvent actionEvent) throws FileNotFoundException {
         if(doLogin()){
             this.isLogged = true;
+
+            SystemLog log = new SystemLog(app.getLastInsertedIdLogs(), "Login no Sistema", app.getUserActive(), LocalDate.now());
+            List<SystemLog> logs = app.getLogs();
+            logs.add(log);
+            app.saveLogs(logs);
+
             window.close();
         }
     }
 
-    private boolean doLogin(){
+    private boolean doLogin() throws FileNotFoundException {
         boolean check = false;
         String email = loginTextField.getText();
         String password = passwordTextField.getText();
@@ -102,6 +110,11 @@ public class LoginController implements Initializable{
         }
 
         if (!check){
+            SystemLog log = new SystemLog(app.getLastInsertedIdLogs(), "Tent. Login (login: "+ email +")", new User(), LocalDate.now());
+            List<SystemLog> logs = app.getLogs();
+            logs.add(log);
+            app.saveLogs(logs);
+
             message += "Email e/ou senha incorretos.\n";
             alertError.setTitle("Erro na Autenticação");
             alertError.setHeaderText("Erro!! Tente novamente!");

@@ -5,8 +5,11 @@
 package hotDogExpress.models;
 
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.time.LocalDate;
 
+@XStreamAlias("user")
 public class User {
 
     private int id;
@@ -127,5 +130,10 @@ public class User {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", role='" + role + '\'' + ", nome='" + nome + '\'' + ", email='" + email + '\'' + ", senha='" + senha + '\'' + ", birthday=" + birthday + ", cpf='" + cpf + '\'' + ", created_at=" + created_at + ", department='" + department + '\'' + '}';
     }
 }

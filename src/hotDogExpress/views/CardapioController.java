@@ -89,7 +89,7 @@ public class CardapioController implements Initializable{
 
     @FXML
     void showBuy(ActionEvent event) {
-
+        mainApp.initClientBuy();
     }
 
     public void setMainApp(MainApp mainApp) {
